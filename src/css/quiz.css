@@ -1,14 +1,10 @@
 .quiz-container{
     color: #293264;
     background-color: #F5F7FB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
     padding-top: 1rem;
+    max-width: 800px;
     margin: auto;
 }
-
 
 .question-container{
     display: flex;
@@ -18,7 +14,9 @@
 }
 
 .start-container{
-    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 
@@ -108,38 +106,15 @@ div button{
 
 
 @media only screen and (max-width: 500px) {
-    body{
-        padding: 0;
-    }
-
-    .quiz-container{
-        color: #293264;
-        background-color: #F5F7FB;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 700px;
-        padding-top: 1rem;
-        margin: 0 auto;
-    }
-
-    .start-container{
-        margin-top: 15rem;
+    h4{
+        font-size: 1rem
     }
 
     .options{
         display: block;
         padding-bottom: 10px;
     }
-
     div button{
-        border: 01px solid #4D5B9E;
-        border-radius: 8px;
-        margin-right: 12px;
-        padding: 4px 8px;
-        font-size: 0.8rem;
-        cursor: pointer;
-        background-color: transparent;
         margin-bottom: 8px;
         
     }

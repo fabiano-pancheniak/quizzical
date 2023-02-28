@@ -100,29 +100,33 @@ export default function Quiz(){
     }
             
     return(
-        <div className='quiz-container'>
+        
 
-            {!gameStarted ? 
-                <div className='start-container'>
+            !gameStarted ? 
+                <div className='container'>
                     <img className='yellow-blob' src={yellowBlob} alt="Logo" />
                     <img className='blue-blob' src={blueBlob} alt="Logo" />
-                    <h1>Quizzical</h1>
-                    <button className='check-btn start-btn' onClick={startGame}>Start Quiz</button> 
-                </div> 
+                        <div className='start-container'>
+                        <h1>Quizzical</h1>
+                        <button className='check-btn start-btn' onClick={startGame}>Start Quiz</button> 
+                        </div>
+                </div>
                 :
-                isLoading ? <div className="loader"></div> 
+                isLoading ? <div className='container'><div className="loader"></div> </div>
                 :
-                <div className='btn-container'>
-                    <img className='yellow-blob' src={yellowBlob} alt="Logo" />
-                    <img className='blue-blob' src={blueBlob} alt="Logo" />
-                    {questionElement}
-                    <div className='results'>
-                        {showAnswers && <h4>You scored {correctAnswers}/5 correct answers</h4>}
-                        <button className='check-btn' onClick={showAnswers ? newGame : handleCheckAnswer}>{showAnswers ? 'Play again' : 'Check answers'}</button>
+                <div className='container'>
+                            <img className='yellow-blob' src={yellowBlob} alt="Logo" />
+                            <img className='blue-blob' src={blueBlob} alt="Logo" />
+                            <div className='quiz-container'>
+                            <div className='btn-container'>
+                            {questionElement}
+                            <div className='results'>
+                                {showAnswers && <h4>You scored {correctAnswers}/5 correct answers</h4>}
+                                <button className='check-btn' onClick={showAnswers ? newGame : handleCheckAnswer}>{showAnswers ? 'Play again' : 'Check answers'}</button>
+                            </div>
+                        </div>
                     </div>
-            </div>
-            }
-
-        </div>
+                </div>
+           
     )    
 }
