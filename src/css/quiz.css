@@ -1,19 +1,39 @@
 .quiz-container{
-    height: 550px;
-    width: 550px;
     color: #293264;
     background-color: #F5F7FB;
-    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    padding-top: 1rem;
+    margin: 6rem auto;
 }
 
 
 .question-container{
-    width: 100%;
-    padding: 0 64px;
     display: flex;
     flex-direction: column;
-
+    text-align: left;
+    padding: 0 16px;
 }
+
+.start-container{
+    margin-top: 8rem;
+}
+
+
+.start-btn{
+    margin-top: 32px;
+    border: none;
+    width: 193px;
+    height: 52px;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    font-family: 'Karla', sans-serif;
+    border-radius: 16px;
+    font-size: 1.1rem;
+}
+
 .btn-container{
     text-align: center;
 }
@@ -21,7 +41,6 @@
 .check-btn{
     width: 120px;
     height: 35px;
-    margin: 20px auto;
     border: none;
     background-color: #4D5B9E;
     color: #F5F7FB;
@@ -31,28 +50,9 @@
 }
 
 h4{
-    margin: 12px 0;
-    
+    padding: 8px 0;
     letter-spacing: 1px;
 }
-
-ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin-bottom: 20px;
-    width: fit-content;
-}
-
-li{
-    border: 01px solid #4D5B9E;
-    border-radius: 8px;
-    margin-right: 12px;
-    padding: 2px 16px;
-    font-size: 0.8rem;
-    cursor: pointer;
-}
-
 
 .selected{
     background-color: #D6DBF5;
@@ -72,3 +72,71 @@ li{
 hr{
     border: solid 1px #E5E5E5;
 }
+
+div button{
+    border: 01px solid #4D5B9E;
+    border-radius: 8px;
+    margin-right: 12px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    
+}
+
+.options{
+    display: flex;
+    margin-right: 12px;
+    padding-bottom: 10px;
+}
+
+.results h4{
+    margin: 0;
+    margin-right: 2rem;
+}
+
+.results{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .quiz-container{
+        color: #293264;
+        background-color: #F5F7FB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+        padding-top: 1rem;
+        margin: 0 auto;
+    }
+
+    .start-container{
+        margin-top: 15rem;
+    }
+
+    .options{
+        display: block;
+        padding-bottom: 10px;
+        margin-left: 12px;
+    }
+
+    div button{
+        border: 01px solid #4D5B9E;
+        border-radius: 8px;
+        margin-right: 12px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        background-color: transparent;
+        margin-bottom: 8px;
+        
+    }
+  }
+
+
